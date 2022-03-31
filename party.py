@@ -1,4 +1,4 @@
-pyc"""Flask site for Balloonicorn's Party."""
+"""Flask site for Balloonicorn's Party."""
 
 from flask import Flask, session, render_template, request, flash, redirect
 
@@ -7,7 +7,16 @@ app.secret_key = "SECRETSECRETSECRET"
 
 
 def is_mel(name, email):
-    """Is this user Mel?"""
+    """Is this user Mel?
+    
+    #from party import is_mel
+    >>> is_mel("Mel Melitpolski"," mel@ubermelon.com")
+    True
+
+    >>> is_mel("Janice", "janice@gmail.com")
+    False
+    """
+
 
     return name == "Mel Melitpolski" or email == "mel@ubermelon.com"
 
